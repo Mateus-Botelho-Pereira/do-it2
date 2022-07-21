@@ -15,8 +15,8 @@ export const theme = {
   baseColors: {
     black: '#000000',
     gray: '#1f1f1f',
-    light_gray: '#F6F4FA',
-    white: '#FFFFFF',
+    light_gray: '##f6f4fA',
+    white: '#ffffff',
   },
 
   fonts: {

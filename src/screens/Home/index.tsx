@@ -2,14 +2,13 @@ import React, { useState, useCallback } from 'react';
 import { styles } from './styles';
 import { View, Image, Text, FlatList } from 'react-native';
 import { useNavigation, useFocusEffect } from "@react-navigation/native";
-import { PostIt } from '../../components/PostIt';
-import { ButtonAdd } from '../../components/ButtonAdd';
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { Loading } from "../../components/Loading";
-import { POST_IT_LIST } from '../../configs/database';
-import { PostItProps } from '../../components/PostIt';
-import { Background } from '../../components/Background';
 import postinho from "../../assets/postinho.png";
+import { Loading } from "../../components/Loading";
+import { ButtonAdd } from '../../components/ButtonAdd';
+import { PostIt } from '../../components/PostIt';
+import { PostItProps } from '../../components/PostIt';
+import { POST_IT_LIST } from '../../configs/database';
 
 export function Home(){
   const navigation = useNavigation();
@@ -38,43 +37,41 @@ export function Home(){
   }
 
   return (
-    <Background>
-      <View style={styles.container}>
-        {
-            storagedList.length === 0 ?
-            <View style={styles.newPostContainer}>
-              <Image
-                source={postinho}
-                style={styles.newPostImage}
-              />
-              <Text  style={styles.newPostText}>
-                ADICIONE UM NOVO POST IT
-              </Text>
-            </View>
-            :
-            <></>
-        }
-        {
-          loading ? 
-          <Loading />
-          :
-          <FlatList 
-          data={storagedList}
-          keyExtractor={item => item.id}
-          renderItem={({ item }) => (
-            <PostIt 
-              data={item}
-              onPress={() => handleEditPostIt(item)}
+    <View style={styles.container}>
+      {
+          storagedList.length === 0 ?
+          <View style={styles.newPostContainer}>
+            <Image
+              source={postinho}
+              style={styles.newPostImage}
             />
-          )}
-          contentContainerStyle={{ paddingBottom: 80 }}
-          showsVerticalScrollIndicator={false}
+            <Text  style={styles.newPostText}>
+              ADICIONE UM NOVO POST IT
+            </Text>
+          </View>
+          :
+          <></>
+      }
+      {
+        loading ? 
+        <Loading />
+        :
+        <FlatList 
+        data={storagedList}
+        keyExtractor={item => item.id}
+        renderItem={({ item }) => (
+          <PostIt 
+            data={item}
+            onPress={() => handleEditPostIt(item)}
           />
-        }
-        <ButtonAdd
-          onPress={handleAddPostIt}
+        )}
+        contentContainerStyle={{ paddingBottom: 80 }}
+        showsVerticalScrollIndicator={false}
         />
-      </View>
-    </Background>
+      }
+      <ButtonAdd
+        onPress={handleAddPostIt}
+      />
+    </View>
   );
 }

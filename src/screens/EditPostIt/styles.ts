@@ -7,6 +7,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 24,
     marginTop: getStatusBarHeight() + 10,
+    backgroundColor: theme.baseColors.light_gray,
   },
   postIt: {
     height: 250,
