@@ -12,7 +12,7 @@ export const styles = StyleSheet.create({
   postIt: {
     height: 250,
     color: theme.baseColors.black,
-    fontFamily: theme.fonts.medium500,
+    fontFamily: theme.fonts.regular400,
     fontSize: 18,
     lineHeight: 22,
     textAlignVertical: 'top',

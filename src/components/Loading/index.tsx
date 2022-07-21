@@ -8,7 +8,7 @@ export function Loading(){
     <View style={styles.container}>
       <ActivityIndicator
         size='large'
-        color={theme.baseColors.black}
+        color={theme.postItColors.color1}
       />
     </View>
   );

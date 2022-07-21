@@ -24,7 +24,7 @@ export const styles = StyleSheet.create({
   },
   newPostText: {
     textAlign: 'justify',
-    fontFamily: theme.fonts.medium500,
+    fontFamily: theme.fonts.regular400,
     fontSize: 16,
     marginTop: 24,
   },

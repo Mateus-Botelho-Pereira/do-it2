@@ -21,6 +21,5 @@ export const theme = {
 
   fonts: {
     regular400: 'Roboto_400Regular',
-    medium500: 'Roboto_500Medium',
   }
 };

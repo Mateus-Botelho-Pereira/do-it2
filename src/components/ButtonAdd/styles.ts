@@ -13,6 +13,6 @@ export const styles = StyleSheet.create({
     bottom: 22,
     alignSelf: 'center',
     borderColor: theme.baseColors.black,
-    borderWidth: 2,
+    borderWidth: 1,
   }
 });
