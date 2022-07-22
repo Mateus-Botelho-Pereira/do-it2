@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import { styles } from './styles';
-import { View, Image, Text, FlatList } from 'react-native';
+import { View, Image, Text, FlatList, Appearance } from 'react-native';
 import { useNavigation, useFocusEffect } from "@react-navigation/native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import postinho from "../../assets/postinho.png";
@@ -9,11 +9,14 @@ import { ButtonAdd } from '../../components/ButtonAdd';
 import { PostIt } from '../../components/PostIt';
 import { PostItProps } from '../../components/PostIt';
 import { POST_IT_LIST } from '../../configs/database';
+import { light, dark } from '../../global/styles/theme';
 
 export function Home(){
   const navigation = useNavigation();
   const [loading, setLoading] = useState(true);
   const [storagedList, setStoragedList] = useState<PostItProps[]>([]);
+
+  const colorScheme = Appearance.getColorScheme();
 
   function handleAddPostIt() {
     navigation.navigate('AddPostIt');
@@ -37,7 +40,7 @@ export function Home(){
   }
 
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, colorScheme === 'light' ? {backgroundColor: light.backgroundColor} : {backgroundColor: dark.backgroundColor}]}>
       {
           storagedList.length === 0 ?
           <View style={styles.newPostContainer}>

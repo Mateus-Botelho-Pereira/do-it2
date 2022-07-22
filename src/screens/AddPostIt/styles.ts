@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: 24,
-    marginTop: getStatusBarHeight() + 10,
+    paddingTop: getStatusBarHeight() + 10,
     backgroundColor: theme.baseColors.light_gray,
   },
   postIt: {

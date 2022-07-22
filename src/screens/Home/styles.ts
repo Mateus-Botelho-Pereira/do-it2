@@ -1,12 +1,12 @@
 import { StyleSheet } from 'react-native';
 import { getStatusBarHeight } from "react-native-iphone-x-helper";
-import { theme } from '../../global/styles/theme';
+import { theme, light, dark } from '../../global/styles/theme';
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: 24,
-    marginTop: getStatusBarHeight() + 10,
+    paddingTop: getStatusBarHeight() + 10,
     backgroundColor: theme.baseColors.light_gray,
   },
   newPostContainer: {

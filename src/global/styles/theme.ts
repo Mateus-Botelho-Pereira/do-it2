@@ -23,3 +23,13 @@ export const theme = {
     regular400: 'Roboto_400Regular',
   }
 };
+
+export const light = {
+  backgroundColor: '#ffffff',
+  color: '#000000'
+};
+
+export const dark = {
+  backgroundColor: '#000000',
+  color: '#ffffff'
+};
