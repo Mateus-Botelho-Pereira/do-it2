@@ -13,7 +13,7 @@ export default function App() {
     <>
       <StatusBar 
         barStyle={colorScheme === 'light' ? 'dark-content' : 'light-content' }
-        backgroundColor={colorScheme === 'light' ? light.backgroundColor : dark.backgroundColor }
+        backgroundColor={colorScheme === 'light' ? light.bg : dark.bg }
         translucent
       />
       { fontsLoaded ? <Routes/> : <Loading/>}

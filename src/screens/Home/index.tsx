@@ -40,7 +40,7 @@ export function Home(){
   }
 
   return (
-    <View style={[styles.container, colorScheme === 'light' ? {backgroundColor: light.backgroundColor} : {backgroundColor: dark.backgroundColor}]}>
+    <View style={[styles.container, colorScheme === 'light' ? {backgroundColor: light.bg} : {backgroundColor: dark.bg}]}>
       {
           storagedList.length === 0 ?
           <View style={styles.newPostContainer}>

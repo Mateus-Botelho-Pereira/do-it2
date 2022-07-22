@@ -25,11 +25,11 @@ export const theme = {
 };
 
 export const light = {
-  backgroundColor: '#ffffff',
-  color: '#000000'
+  bg: '#ffffff',
+  tx: '#000000'
 };
 
 export const dark = {
-  backgroundColor: '#000000',
-  color: '#ffffff'
+  bg: '#000000',
+  tx: '#ffffff'
 };
