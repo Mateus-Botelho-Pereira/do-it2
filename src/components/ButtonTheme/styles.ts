@@ -19,7 +19,7 @@ export const styles = StyleSheet.create({
   containerDark: {
     width: 48,
     height: 48,
-    backgroundColor: dark.bg,
+    backgroundColor: theme.baseColors.white,
     borderRadius: 32,
     alignItems: "center",
     justifyContent: "center",

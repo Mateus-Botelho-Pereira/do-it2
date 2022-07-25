@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import { styles } from './styles';
-import { View, Image, Text, FlatList, Appearance } from 'react-native';
+import { StatusBar, View, Image, Text, FlatList } from 'react-native';
 import { useNavigation, useFocusEffect } from "@react-navigation/native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import postinho from "../../assets/postinho.png";
@@ -17,8 +17,6 @@ export function Home(){
   const [loading, setLoading] = useState(true);
   const [storagedList, setStoragedList] = useState<PostItProps[]>([]);
   const [themeSelected, setThemeSelected] = useState<'light' | 'dark'>('light');
-
-  const colorScheme = Appearance.getColorScheme();
 
   function handleAddPostIt() {
     navigation.navigate('AddPostIt');
@@ -46,7 +44,12 @@ export function Home(){
   }
 
   return (
-    <View style={[styles.container, colorScheme === 'light' ? {backgroundColor: light.bg} : {backgroundColor: dark.bg}]}>
+    <View style={[styles.container, themeSelected === 'light' ? {backgroundColor: light.bg} : {backgroundColor: dark.bg}]}>
+      <StatusBar 
+        barStyle={themeSelected === 'light' ? 'dark-content' : 'light-content' }
+        backgroundColor={themeSelected === 'light' ? light.bg : dark.bg }
+        translucent
+      />
       {
           storagedList.length === 0 ?
           <View style={styles.newPostContainer}>
@@ -71,6 +74,7 @@ export function Home(){
         renderItem={({ item }) => (
           <PostIt 
             data={item}
+            themeSelected={themeSelected}
             onPress={() => handleEditPostIt(item)}
           />
         )}
@@ -80,6 +84,7 @@ export function Home(){
       }
       <ButtonAdd
         onPress={handleAddPostIt}
+        themeSelected={themeSelected}
       />
 
       <ButtonTheme

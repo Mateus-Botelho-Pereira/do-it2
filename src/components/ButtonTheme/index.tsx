@@ -11,13 +11,13 @@ type Props = TouchableOpacityProps & {
 export function ButtonTheme({themeSelected, ...rest} : Props){
   return(
     <TouchableOpacity 
-      style={[ themeSelected === 'light' ? [styles.containerLight] : [styles.containerDark]]}
+      style={[ themeSelected === 'light' ? [styles.containerDark] : [styles.containerLight]]}
       activeOpacity={0.7}
       {...rest}
     >
       <Feather 
-        name={themeSelected === 'light' ? 'sun' : 'moon'}
-        color={themeSelected === 'light' ? theme.postItColors.color1 : theme.baseColors.white}
+        name={themeSelected === 'light' ? 'moon' : 'sun'}
+        color={themeSelected === 'light' ? theme.baseColors.black : theme.postItColors.color1}
         size={24}
       />
     </TouchableOpacity>

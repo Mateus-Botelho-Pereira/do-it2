@@ -1,27 +1,26 @@
 import React from 'react';
 import { styles } from './styles';
-import { View, Text, TouchableOpacity, TouchableOpacityProps, Appearance } from "react-native";
+import { View, Text, TouchableOpacity, TouchableOpacityProps } from "react-native";
 
 export type PostItProps = {
-  id: 'string',
-  content: 'string',
-  color: 'string',
+  id: 'string';
+  content: 'string';
+  color: 'string';
 }
 
 type Props = TouchableOpacityProps & {
   data: PostItProps;
+  themeSelected: 'light' | 'dark';
 }
 
-export function PostIt({data, ...rest}: Props){
-  const colorScheme = Appearance.getColorScheme();
-
+export function PostIt({data, themeSelected, ...rest}: Props){
   return (
     <TouchableOpacity 
-      style={[ colorScheme === 'light' ? [styles.containerLight, {backgroundColor: data.color}] : [styles.containerDark, {borderColor: data.color}]]}
+      style={[ themeSelected === 'light' ? [styles.containerLight, {backgroundColor: data.color}] : [styles.containerDark, {borderColor: data.color}]]}
       activeOpacity={0.7}
       {...rest}
     >
-      <Text style={[ colorScheme === 'light' ? styles.text : [styles.text, {color: data.color}]]}>
+      <Text style={[ themeSelected === 'light' ? styles.text : [styles.text, {color: data.color}]]}>
         {data.content}
       </Text>
     </TouchableOpacity>
