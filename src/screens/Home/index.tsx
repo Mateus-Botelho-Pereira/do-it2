@@ -6,6 +6,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import postinho from "../../assets/postinho.png";
 import { Loading } from "../../components/Loading";
 import { ButtonAdd } from '../../components/ButtonAdd';
+import { ButtonTheme } from '../../components/ButtonTheme';
 import { PostIt } from '../../components/PostIt';
 import { PostItProps } from '../../components/PostIt';
 import { POST_IT_LIST } from '../../configs/database';
@@ -15,6 +16,7 @@ export function Home(){
   const navigation = useNavigation();
   const [loading, setLoading] = useState(true);
   const [storagedList, setStoragedList] = useState<PostItProps[]>([]);
+  const [themeSelected, setThemeSelected] = useState<'light' | 'dark'>('light');
 
   const colorScheme = Appearance.getColorScheme();
 
@@ -24,6 +26,10 @@ export function Home(){
 
   function handleEditPostIt(postItSelected: PostItProps) {
     navigation.navigate('EditPostIt', {postItSelected});
+  }
+
+  function toggleTheme() {
+    themeSelected === 'light' ? setThemeSelected('dark') : setThemeSelected('light');
   }
   
   useFocusEffect(useCallback(() => {
@@ -74,6 +80,11 @@ export function Home(){
       }
       <ButtonAdd
         onPress={handleAddPostIt}
+      />
+
+      <ButtonTheme
+        onPress={toggleTheme}
+        themeSelected={themeSelected}
       />
     </View>
   );
