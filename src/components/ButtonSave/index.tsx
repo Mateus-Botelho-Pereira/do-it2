@@ -11,7 +11,10 @@ type Props = TouchableOpacityProps & {
 export function ButtonSave({themeSelected, ...rest} : Props){
   return(
     <TouchableOpacity
-      style={[ themeSelected === 'light' ? [styles.containerLight] : [styles.containerDark]]}
+      style={[ themeSelected === 'light' ? 
+      [styles.container, {backgroundColor: colors.orange, borderColor: colors.black}]
+      :
+      [styles.container, {backgroundColor: colors.black, borderColor: colors.orange}]]}
       activeOpacity={0.7}
       {...rest}
     >
