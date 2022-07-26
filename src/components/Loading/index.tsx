@@ -1,7 +1,7 @@
 import React from 'react';
-import { View, ActivityIndicator } from 'react-native';
-import { colors, light, dark } from '../../global/styles/theme';
 import { styles } from './styles';
+import { View, ActivityIndicator } from 'react-native';
+import { colors } from '../../global/styles/theme';
 
 type Props = {
   themeSelected?: string;
@@ -9,7 +9,7 @@ type Props = {
 
 export function Loading({themeSelected = 'light'} : Props){
   return (
-    <View style={[ themeSelected === 'light' ? [styles.container] : [styles.container, {backgroundColor: dark.bg}]]}>
+    <View style={[ themeSelected === 'light' ? [styles.container] : [styles.container, {backgroundColor: colors.black}]]}>
       <ActivityIndicator
         size='large'
         color={ themeSelected === 'light' ? colors.orange : colors.white}
