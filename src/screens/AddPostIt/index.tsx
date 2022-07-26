@@ -88,7 +88,7 @@ export function AddPostIt(){
               style={[ themeSelected === 'light' ? 
               [styles.colorButton, {backgroundColor: theme.postItColors.color1, borderColor: 'black'}] 
               : 
-              [styles.colorButton, {backgroundColor: theme.baseColors.black, borderColor: theme.postItColors.color1}]]}
+              [styles.colorButton, {backgroundColor: theme.baseColors.black, borderColor: theme.postItColors.color1, borderWidth: 3}]]}
               activeOpacity={0.7}
               onPress={() => getColor('#fdba74')}
             />
@@ -96,7 +96,7 @@ export function AddPostIt(){
               style={[ themeSelected === 'light' ? 
               [styles.colorButton, {backgroundColor: theme.postItColors.color2, borderColor: 'black'}] 
               : 
-              [styles.colorButton, {backgroundColor: theme.baseColors.black, borderColor: theme.postItColors.color2}]]}
+              [styles.colorButton, {backgroundColor: theme.baseColors.black, borderColor: theme.postItColors.color2, borderWidth: 3}]]}
               activeOpacity={0.7}
               onPress={() => getColor('#fde047')}
             />
@@ -104,7 +104,7 @@ export function AddPostIt(){
               style={[ themeSelected === 'light' ? 
               [styles.colorButton, {backgroundColor: theme.postItColors.color3, borderColor: 'black'}] 
               : 
-              [styles.colorButton, {backgroundColor: theme.baseColors.black, borderColor: theme.postItColors.color3}]]}
+              [styles.colorButton, {backgroundColor: theme.baseColors.black, borderColor: theme.postItColors.color3, borderWidth: 3}]]}
               activeOpacity={0.7}
               onPress={() => getColor('#bef264')}
             />
@@ -112,7 +112,7 @@ export function AddPostIt(){
               style={[ themeSelected === 'light' ? 
               [styles.colorButton, {backgroundColor: theme.postItColors.color4, borderColor: 'black'}] 
               : 
-              [styles.colorButton, {backgroundColor: theme.baseColors.black, borderColor: theme.postItColors.color4}]]}
+              [styles.colorButton, {backgroundColor: theme.baseColors.black, borderColor: theme.postItColors.color4, borderWidth: 3}]]}
               activeOpacity={0.7}
               onPress={() => getColor('#6ee7b7')}
             />
@@ -120,7 +120,7 @@ export function AddPostIt(){
               style={[ themeSelected === 'light' ? 
               [styles.colorButton, {backgroundColor: theme.postItColors.color5, borderColor: 'black'}] 
               : 
-              [styles.colorButton, {backgroundColor: theme.baseColors.black, borderColor: theme.postItColors.color5}]]}
+              [styles.colorButton, {backgroundColor: theme.baseColors.black, borderColor: theme.postItColors.color5, borderWidth: 3}]]}
               activeOpacity={0.7}
               onPress={() => getColor('#67e8f9')}
             />                              
@@ -131,7 +131,7 @@ export function AddPostIt(){
               style={[ themeSelected === 'light' ? 
               [styles.colorButton, {backgroundColor: theme.postItColors.color6, borderColor: 'black'}] 
               : 
-              [styles.colorButton, {backgroundColor: theme.baseColors.black, borderColor: theme.postItColors.color6}]]}
+              [styles.colorButton, {backgroundColor: theme.baseColors.black, borderColor: theme.postItColors.color6, borderWidth: 3}]]}
               activeOpacity={0.7}
               onPress={() => getColor('#4aa9ff')}
             />
@@ -139,7 +139,7 @@ export function AddPostIt(){
               style={[ themeSelected === 'light' ? 
               [styles.colorButton, {backgroundColor: theme.postItColors.color7, borderColor: 'black'}] 
               : 
-              [styles.colorButton, {backgroundColor: theme.baseColors.black, borderColor: theme.postItColors.color7}]]}
+              [styles.colorButton, {backgroundColor: theme.baseColors.black, borderColor: theme.postItColors.color7, borderWidth: 3}]]}
               activeOpacity={0.7}
               onPress={() => getColor('#c4b5fd')}
             />
@@ -147,7 +147,7 @@ export function AddPostIt(){
               style={[ themeSelected === 'light' ? 
               [styles.colorButton, {backgroundColor: theme.postItColors.color8, borderColor: 'black'}] 
               : 
-              [styles.colorButton, {backgroundColor: theme.baseColors.black, borderColor: theme.postItColors.color8}]]}
+              [styles.colorButton, {backgroundColor: theme.baseColors.black, borderColor: theme.postItColors.color8, borderWidth: 3}]]}
               activeOpacity={0.7}
               onPress={() => getColor('#f0abfc')}
             />
@@ -155,7 +155,7 @@ export function AddPostIt(){
               style={[ themeSelected === 'light' ? 
               [styles.colorButton, {backgroundColor: theme.postItColors.color9, borderColor: 'black'}] 
               : 
-              [styles.colorButton, {backgroundColor: theme.baseColors.black, borderColor: theme.postItColors.color9}]]}
+              [styles.colorButton, {backgroundColor: theme.baseColors.black, borderColor: theme.postItColors.color9, borderWidth: 3}]]}
               activeOpacity={0.7}
               onPress={() => getColor('#fda4af')}
             />
@@ -163,7 +163,7 @@ export function AddPostIt(){
               style={[ themeSelected === 'light' ? 
               [styles.colorButton, {backgroundColor: theme.postItColors.color10, borderColor: 'black'}] 
               : 
-              [styles.colorButton, {backgroundColor: theme.baseColors.black, borderColor: theme.postItColors.color10}]]}
+              [styles.colorButton, {backgroundColor: theme.baseColors.black, borderColor: theme.postItColors.color10, borderWidth: 3}]]}
               activeOpacity={0.7}
               onPress={() => getColor('#f87171')}
             />

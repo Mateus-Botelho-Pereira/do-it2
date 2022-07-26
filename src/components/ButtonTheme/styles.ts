@@ -13,7 +13,7 @@ export const styles = StyleSheet.create({
     bottom: 30,
     left: 24,
     alignSelf: 'center',
-    borderColor: theme.postItColors.color1,
+    borderColor: theme.baseColors.white,
     borderWidth: 1,
   },
   containerDark: {

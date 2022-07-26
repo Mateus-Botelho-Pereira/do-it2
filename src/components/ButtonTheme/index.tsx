@@ -17,7 +17,7 @@ export function ButtonTheme({themeSelected, ...rest} : Props){
     >
       <Feather 
         name={themeSelected === 'light' ? 'moon' : 'sun'}
-        color={themeSelected === 'light' ? theme.baseColors.black : theme.postItColors.color1}
+        color={themeSelected === 'light' ? theme.baseColors.black : theme.baseColors.white}
         size={24}
       />
     </TouchableOpacity>
