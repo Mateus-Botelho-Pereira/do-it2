@@ -69,7 +69,7 @@ export function Home(){
               source={postinho}
               style={styles.newPostImage}
             />
-            <Text  style={styles.newPostText}>
+            <Text  style={[styles.newPostText, themeSelected === 'light' ? {color: colors.black} : {color: colors.white}]}>
               ADICIONE UM NOVO POST IT
             </Text>
           </View>

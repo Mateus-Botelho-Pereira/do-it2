@@ -22,7 +22,7 @@ export function EditPostIt(){
   const { CurrentTheme } = route.params as RouteParams;
   
   const [typedText, setTypedText] = useState('');
-  const [currentColor, setCurrentColor] = useState('#fdba74');
+  const [currentColor, setCurrentColor] = useState(postItColors.color1);
   const [themeSelected, setThemeSelected] = useState('light');
 
   useEffect(() => {
@@ -100,6 +100,7 @@ export function EditPostIt(){
           autoCorrect={false}
           onChangeText={setTypedText}
           value={typedText}
+          autoFocus
         />
         <View style={styles.colorSelector}>
         <View style={styles.colorRow}>
@@ -109,7 +110,7 @@ export function EditPostIt(){
               : 
               [styles.colorButton, {backgroundColor: colors.black, borderColor: postItColors.color1, borderWidth: 3}]]}
               activeOpacity={0.7}
-              onPress={() => getColor('#fdba74')}
+              onPress={() => getColor(postItColors.color1)}
             />
             <TouchableOpacity 
               style={[ themeSelected === 'light' ? 
@@ -117,7 +118,7 @@ export function EditPostIt(){
               : 
               [styles.colorButton, {backgroundColor: colors.black, borderColor: postItColors.color2, borderWidth: 3}]]}
               activeOpacity={0.7}
-              onPress={() => getColor('#fde047')}
+              onPress={() => getColor(postItColors.color2)}
             />
             <TouchableOpacity 
               style={[ themeSelected === 'light' ? 
@@ -125,7 +126,7 @@ export function EditPostIt(){
               : 
               [styles.colorButton, {backgroundColor: colors.black, borderColor: postItColors.color3, borderWidth: 3}]]}
               activeOpacity={0.7}
-              onPress={() => getColor('#bef264')}
+              onPress={() => getColor(postItColors.color3)}
             />
             <TouchableOpacity 
               style={[ themeSelected === 'light' ? 
@@ -133,7 +134,7 @@ export function EditPostIt(){
               : 
               [styles.colorButton, {backgroundColor: colors.black, borderColor: postItColors.color4, borderWidth: 3}]]}
               activeOpacity={0.7}
-              onPress={() => getColor('#6ee7b7')}
+              onPress={() => getColor(postItColors.color4)}
             />
             <TouchableOpacity 
               style={[ themeSelected === 'light' ? 
@@ -141,7 +142,7 @@ export function EditPostIt(){
               : 
               [styles.colorButton, {backgroundColor: colors.black, borderColor: postItColors.color5, borderWidth: 3}]]}
               activeOpacity={0.7}
-              onPress={() => getColor('#67e8f9')}
+              onPress={() => getColor(postItColors.color5)}
             />                              
           </View>
 
@@ -152,7 +153,7 @@ export function EditPostIt(){
               : 
               [styles.colorButton, {backgroundColor: colors.black, borderColor: postItColors.color6, borderWidth: 3}]]}
               activeOpacity={0.7}
-              onPress={() => getColor('#4aa9ff')}
+              onPress={() => getColor(postItColors.color6)}
             />
             <TouchableOpacity 
               style={[ themeSelected === 'light' ? 
@@ -160,7 +161,7 @@ export function EditPostIt(){
               : 
               [styles.colorButton, {backgroundColor: colors.black, borderColor: postItColors.color7, borderWidth: 3}]]}
               activeOpacity={0.7}
-              onPress={() => getColor('#c4b5fd')}
+              onPress={() => getColor(postItColors.color7)}
             />
             <TouchableOpacity 
               style={[ themeSelected === 'light' ? 
@@ -168,7 +169,7 @@ export function EditPostIt(){
               : 
               [styles.colorButton, {backgroundColor: colors.black, borderColor: postItColors.color8, borderWidth: 3}]]}
               activeOpacity={0.7}
-              onPress={() => getColor('#f0abfc')}
+              onPress={() => getColor(postItColors.color8)}
             />
             <TouchableOpacity 
               style={[ themeSelected === 'light' ? 
@@ -176,7 +177,7 @@ export function EditPostIt(){
               : 
               [styles.colorButton, {backgroundColor: colors.black, borderColor: postItColors.color9, borderWidth: 3}]]}
               activeOpacity={0.7}
-              onPress={() => getColor('#fda4af')}
+              onPress={() => getColor(postItColors.color9)}
             />
             <TouchableOpacity 
               style={[ themeSelected === 'light' ? 
@@ -184,7 +185,7 @@ export function EditPostIt(){
               : 
               [styles.colorButton, {backgroundColor: colors.black, borderColor: postItColors.color10, borderWidth: 3}]]}
               activeOpacity={0.7}
-              onPress={() => getColor('#f87171')}
+              onPress={() => getColor(postItColors.color10)}
             />
           </View>
         </View>
