@@ -9,7 +9,7 @@ import { ButtonAdd } from '../../components/ButtonAdd';
 import { ButtonTheme } from '../../components/ButtonTheme';
 import { PostIt } from '../../components/PostIt';
 import { PostItProps } from '../../components/PostIt';
-import { POST_IT_LIST } from '../../configs/database';
+import { POST_IT_LIST, THEME_SAVED } from '../../configs/database';
 import { light, dark } from '../../global/styles/theme';
 
 export function Home(){
@@ -19,15 +19,22 @@ export function Home(){
   const [themeSelected, setThemeSelected] = useState<'light' | 'dark'>('light');
 
   function handleAddPostIt() {
-    navigation.navigate('AddPostIt');
+    navigation.navigate('AddPostIt', {CurrentTheme: themeSelected});
   }
 
   function handleEditPostIt(postItSelected: PostItProps) {
-    navigation.navigate('EditPostIt', {postItSelected});
+    navigation.navigate('EditPostIt', {CurrentTheme: themeSelected, postItSelected: postItSelected});
   }
 
-  function toggleTheme() {
-    themeSelected === 'light' ? setThemeSelected('dark') : setThemeSelected('light');
+  async function toggleTheme() {
+    const newTheme = themeSelected === 'light' ? 'dark' : 'light';
+    
+    setThemeSelected(newTheme)
+
+    await AsyncStorage.setItem(
+      THEME_SAVED,
+      JSON.stringify(newTheme)
+    );
   }
   
   useFocusEffect(useCallback(() => {
@@ -39,6 +46,11 @@ export function Home(){
     const postItArray: PostItProps[] = storage ? JSON.parse(storage) : [];
 
     setStoragedList(postItArray);
+
+    const storage_theme = await AsyncStorage.getItem(THEME_SAVED);
+    const theme = storage_theme ? JSON.parse(storage_theme) : 'light';
+
+    setThemeSelected(theme);
 
     setLoading(false);
   }
@@ -66,7 +78,7 @@ export function Home(){
       }
       {
         loading ? 
-        <Loading />
+        <Loading themeSelected={themeSelected}/>
         :
         <FlatList 
         data={storagedList}

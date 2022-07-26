@@ -5,7 +5,7 @@ import { MaterialCommunityIcons } from "@expo/vector-icons"
 import { theme } from '../../global/styles/theme';
 
 type Props = TouchableOpacityProps & {
-  themeSelected: 'light' | 'dark';
+  themeSelected: string;
 }
 
 export function ButtonAdd({themeSelected, ...rest} : Props){

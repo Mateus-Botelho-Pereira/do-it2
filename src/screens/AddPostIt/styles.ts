@@ -18,7 +18,6 @@ export const styles = StyleSheet.create({
     textAlignVertical: 'top',
     padding: 12,
     borderTopRightRadius: 16,
-    borderColor: 'black',
     borderWidth: 1,
   },
   colorSelector: {
@@ -32,7 +31,6 @@ export const styles = StyleSheet.create({
     width: 48,
     height: 48,
     borderRadius: 24,
-    borderColor: 'black',
     borderWidth: 1,
     margin: 6,
   }

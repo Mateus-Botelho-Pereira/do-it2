@@ -2,8 +2,8 @@ export declare global {
   namespace ReactNavigation {
     interface RootParamList {
       Home: undefined;
-      AddPostIt: undefined;
-      EditPostIt: { postItSelected: any };
+      AddPostIt: { CurrentTheme: string };
+      EditPostIt: { CurrentTheme: string, postItSelected: PostItProps };
     }
   }
 }

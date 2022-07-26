@@ -8,7 +8,7 @@ export default function App() {
 
   return (
     <>
-      { fontsLoaded ? <Routes/> : <Loading/>}
+      { fontsLoaded ? <Routes/> : <Loading />}
     </>
   );
 }

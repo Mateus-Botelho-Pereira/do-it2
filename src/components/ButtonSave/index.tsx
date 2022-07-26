@@ -4,16 +4,20 @@ import { TouchableOpacity, TouchableOpacityProps } from "react-native";
 import { Fontisto } from "@expo/vector-icons"
 import { theme } from '../../global/styles/theme';
 
-export function ButtonSave({...rest} : TouchableOpacityProps){
+type Props = TouchableOpacityProps & {
+  themeSelected: string;
+}
+
+export function ButtonSave({themeSelected, ...rest} : Props){
   return(
     <TouchableOpacity
-      style={styles.container}
+      style={[ themeSelected === 'light' ? [styles.containerLight] : [styles.containerDark]]}
       activeOpacity={0.7}
       {...rest}
     >
       <Fontisto 
         name="save"
-        color={theme.baseColors.black}
+        color={themeSelected === 'light' ? theme.baseColors.black : theme.postItColors.color1}
         size={32}
       />
     </TouchableOpacity>

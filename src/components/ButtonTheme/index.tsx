@@ -5,7 +5,7 @@ import { theme } from '../../global/styles/theme';
 import { Feather } from "@expo/vector-icons";
 
 type Props = TouchableOpacityProps & {
-  themeSelected: 'light' | 'dark';
+  themeSelected: string;
 }
 
 export function ButtonTheme({themeSelected, ...rest} : Props){

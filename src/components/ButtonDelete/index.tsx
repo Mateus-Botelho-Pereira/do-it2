@@ -4,16 +4,20 @@ import { TouchableOpacity, TouchableOpacityProps } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons"
 import { theme } from '../../global/styles/theme';
 
-export function ButtonDelete({...rest} : TouchableOpacityProps){
+type Props = TouchableOpacityProps & {
+  themeSelected: string;
+}
+
+export function ButtonDelete({themeSelected, ...rest} : Props){
   return(
-    <TouchableOpacity 
-      style={styles.container}
+    <TouchableOpacity
+    style={[ themeSelected === 'light' ? [styles.containerLight] : [styles.containerDark]]}
       activeOpacity={0.7}
       {...rest}
     >
       <MaterialCommunityIcons 
         name="delete-outline"
-        color={theme.baseColors.white}
+        color={themeSelected === 'light' ? theme.baseColors.black : theme.baseColors.white}
         size={24}
       />
     </TouchableOpacity>

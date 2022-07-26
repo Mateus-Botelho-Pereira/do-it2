@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { dark, theme } from '../../global/styles/theme';
+import { theme, light, dark } from '../../global/styles/theme';
 
 export const styles = StyleSheet.create({
   containerLight: {
