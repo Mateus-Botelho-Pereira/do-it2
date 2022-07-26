@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { styles } from './styles';
-import { colors, postItColors, light, dark } from '../../global/styles/theme';
+import { colors, postItColors } from '../../global/styles/theme';
 import { View, TextInput, TouchableOpacity, Alert } from 'react-native';
 import { useNavigation, useRoute } from "@react-navigation/native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
@@ -70,10 +70,10 @@ export function AddPostIt(){
   }
 
   return (
-    <View style={[styles.container, themeSelected === 'light' ? {backgroundColor: light.bg} : {backgroundColor: dark.bg}]}>
+    <View style={[styles.container, themeSelected === 'light' ? {backgroundColor: colors.light_gray} : {backgroundColor: colors.black}]}>
         <TextInput
           style={[ themeSelected === 'light' ? 
-          [styles.postIt, {backgroundColor: currentColor, borderColor: dark.bg}] 
+          [styles.postIt, {backgroundColor: currentColor, borderColor: colors.black}] 
           : 
           [styles.postIt, {backgroundColor: colors.black, borderColor: currentColor, color: currentColor}]]}
           multiline

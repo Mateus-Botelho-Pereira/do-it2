@@ -1,7 +1,7 @@
 export const colors = {
   black: '#000000',
   white: '#ffffff',
-  light_gray: '##f6f4fA',
+  light_gray: '#f6f4fA',
   orange: '#fdba74',
 };
 

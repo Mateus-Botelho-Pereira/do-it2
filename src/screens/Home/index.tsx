@@ -1,16 +1,16 @@
 import React, { useState, useCallback } from 'react';
 import { styles } from './styles';
+import { colors } from '../../global/styles/theme';
+import postinho from "../../assets/postinho.png";
 import { StatusBar, View, Image, Text, FlatList } from 'react-native';
 import { useNavigation, useFocusEffect } from "@react-navigation/native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import postinho from "../../assets/postinho.png";
 import { Loading } from "../../components/Loading";
 import { ButtonAdd } from '../../components/ButtonAdd';
 import { ButtonTheme } from '../../components/ButtonTheme';
+import { POST_IT_LIST, THEME_SAVED } from '../../configs/database';
 import { PostIt } from '../../components/PostIt';
 import { PostItProps } from '../../components/PostIt';
-import { POST_IT_LIST, THEME_SAVED } from '../../configs/database';
-import { light, dark } from '../../global/styles/theme';
 
 export function Home(){
   const navigation = useNavigation();
@@ -56,10 +56,10 @@ export function Home(){
   }
 
   return (
-    <View style={[styles.container, themeSelected === 'light' ? {backgroundColor: light.bg} : {backgroundColor: dark.bg}]}>
+    <View style={[styles.container, themeSelected === 'light' ? {backgroundColor: colors.light_gray} : {backgroundColor: colors.black}]}>
       <StatusBar 
         barStyle={themeSelected === 'light' ? 'dark-content' : 'light-content' }
-        backgroundColor={themeSelected === 'light' ? light.bg : dark.bg }
+        backgroundColor={themeSelected === 'light' ? colors.light_gray : colors.black }
         translucent
       />
       {

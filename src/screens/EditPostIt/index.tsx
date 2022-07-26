@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { styles } from './styles';
-import { colors, postItColors, light, dark } from '../../global/styles/theme';
+import { colors, postItColors } from '../../global/styles/theme';
 import { View, TextInput, TouchableOpacity, Alert } from 'react-native';
 import { useNavigation, useRoute } from "@react-navigation/native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { ButtonSave } from '../../components/ButtonSave';
 import { ButtonBack } from '../../components/ButtonBack';
 import { ButtonDelete } from '../../components/ButtonDelete';
-import { PostItProps } from '../../components/PostIt';
 import { POST_IT_LIST } from '../../configs/database';
+import { PostItProps } from '../../components/PostIt';
 
 type RouteParams = {
   postItSelected: PostItProps;
@@ -89,10 +89,10 @@ export function EditPostIt(){
   }
 
   return (
-    <View style={[styles.container, themeSelected === 'light' ? {backgroundColor: light.bg} : {backgroundColor: dark.bg}]}>
+    <View style={[styles.container, themeSelected === 'light' ? {backgroundColor: colors.light_gray} : {backgroundColor: colors.black}]}>
         <TextInput
           style={[ themeSelected === 'light' ? 
-          [styles.postIt, {backgroundColor: currentColor, borderColor: dark.bg}] 
+          [styles.postIt, {backgroundColor: currentColor, borderColor: colors.black}] 
           : 
           [styles.postIt, {backgroundColor: colors.black, borderColor: currentColor, color: currentColor}]]}
           multiline
