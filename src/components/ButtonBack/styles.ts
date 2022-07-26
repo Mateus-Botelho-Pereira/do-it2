@@ -1,13 +1,13 @@
 import { StyleSheet } from 'react-native';
-import { theme } from '../../global/styles/theme';
+import { colors } from '../../global/styles/theme';
 
 export const styles = StyleSheet.create({
   containerLight: {
     width: 48,
     height: 48,
-    backgroundColor: theme.baseColors.white,
+    backgroundColor: colors.white,
     borderRadius: 32,
-    borderColor: theme.baseColors.black,
+    borderColor: colors.black,
     borderWidth: 1,
     alignItems: "center",
     justifyContent: "center",
@@ -19,9 +19,9 @@ export const styles = StyleSheet.create({
   containerDark: {
     width: 48,
     height: 48,
-    backgroundColor: theme.baseColors.black,
+    backgroundColor: colors.black,
     borderRadius: 32,
-    borderColor: theme.baseColors.white,
+    borderColor: colors.white,
     borderWidth: 1,
     alignItems: "center",
     justifyContent: "center",

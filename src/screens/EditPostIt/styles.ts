@@ -1,18 +1,18 @@
 import { StyleSheet } from 'react-native';
 import { getStatusBarHeight } from "react-native-iphone-x-helper";
-import { theme } from '../../global/styles/theme';
+import { colors, fonts } from '../../global/styles/theme';
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: 24,
     paddingTop: getStatusBarHeight() + 10,
-    backgroundColor: theme.baseColors.light_gray,
+    backgroundColor: colors.light_gray,
   },
   postIt: {
     height: 250,
-    color: theme.baseColors.black,
-    fontFamily: theme.fonts.regular400,
+    color: colors.black,
+    fontFamily: fonts.roboto.regular400,
     fontSize: 18,
     lineHeight: 22,
     textAlignVertical: 'top',

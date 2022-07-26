@@ -1,13 +1,13 @@
 import { StyleSheet } from 'react-native';
 import { getStatusBarHeight } from "react-native-iphone-x-helper";
-import { theme, light, dark } from '../../global/styles/theme';
+import { colors, fonts, light, dark } from '../../global/styles/theme';
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingHorizontal: 24,
     paddingTop: getStatusBarHeight() + 10,
-    backgroundColor: theme.baseColors.light_gray,
+    backgroundColor: colors.light_gray,
   },
   newPostContainer: {
     position: "absolute",
@@ -24,7 +24,7 @@ export const styles = StyleSheet.create({
   },
   newPostText: {
     textAlign: 'justify',
-    fontFamily: theme.fonts.regular400,
+    fontFamily: fonts.roboto.regular400,
     fontSize: 16,
     marginTop: 24,
   },

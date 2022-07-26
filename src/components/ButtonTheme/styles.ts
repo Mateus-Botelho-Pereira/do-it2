@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { dark, theme } from '../../global/styles/theme';
+import { dark, colors } from '../../global/styles/theme';
 
 export const styles = StyleSheet.create({
   containerLight: {
@@ -13,13 +13,13 @@ export const styles = StyleSheet.create({
     bottom: 30,
     left: 24,
     alignSelf: 'center',
-    borderColor: theme.baseColors.white,
+    borderColor: colors.white,
     borderWidth: 1,
   },
   containerDark: {
     width: 48,
     height: 48,
-    backgroundColor: theme.baseColors.white,
+    backgroundColor: colors.white,
     borderRadius: 32,
     alignItems: "center",
     justifyContent: "center",

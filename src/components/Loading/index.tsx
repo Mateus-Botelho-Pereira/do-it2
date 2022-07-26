@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, ActivityIndicator } from 'react-native';
-import { theme, light, dark } from '../../global/styles/theme';
+import { colors, light, dark } from '../../global/styles/theme';
 import { styles } from './styles';
 
 type Props = {
@@ -12,7 +12,7 @@ export function Loading({themeSelected = 'light'} : Props){
     <View style={[ themeSelected === 'light' ? [styles.container] : [styles.container, {backgroundColor: dark.bg}]]}>
       <ActivityIndicator
         size='large'
-        color={ themeSelected === 'light' ? theme.postItColors.color1 : theme.baseColors.white}
+        color={ themeSelected === 'light' ? colors.orange : colors.white}
       />
     </View>
   );

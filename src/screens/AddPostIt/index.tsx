@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { styles } from './styles';
-import { theme, light, dark } from '../../global/styles/theme';
+import { colors, postItColors, light, dark } from '../../global/styles/theme';
 import { View, TextInput, TouchableOpacity, Alert } from 'react-native';
 import { useNavigation, useRoute } from "@react-navigation/native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
@@ -75,7 +75,7 @@ export function AddPostIt(){
           style={[ themeSelected === 'light' ? 
           [styles.postIt, {backgroundColor: currentColor, borderColor: dark.bg}] 
           : 
-          [styles.postIt, {backgroundColor: theme.baseColors.black, borderColor: currentColor, color: currentColor}]]}
+          [styles.postIt, {backgroundColor: colors.black, borderColor: currentColor, color: currentColor}]]}
           multiline
           numberOfLines={10}
           autoCorrect={false}
@@ -86,41 +86,41 @@ export function AddPostIt(){
           <View style={styles.colorRow}>
             <TouchableOpacity 
               style={[ themeSelected === 'light' ? 
-              [styles.colorButton, {backgroundColor: theme.postItColors.color1, borderColor: 'black'}] 
+              [styles.colorButton, {backgroundColor: postItColors.color1, borderColor: 'black'}] 
               : 
-              [styles.colorButton, {backgroundColor: theme.baseColors.black, borderColor: theme.postItColors.color1, borderWidth: 3}]]}
+              [styles.colorButton, {backgroundColor: colors.black, borderColor: postItColors.color1, borderWidth: 3}]]}
               activeOpacity={0.7}
               onPress={() => getColor('#fdba74')}
             />
             <TouchableOpacity 
               style={[ themeSelected === 'light' ? 
-              [styles.colorButton, {backgroundColor: theme.postItColors.color2, borderColor: 'black'}] 
+              [styles.colorButton, {backgroundColor: postItColors.color2, borderColor: 'black'}] 
               : 
-              [styles.colorButton, {backgroundColor: theme.baseColors.black, borderColor: theme.postItColors.color2, borderWidth: 3}]]}
+              [styles.colorButton, {backgroundColor: colors.black, borderColor: postItColors.color2, borderWidth: 3}]]}
               activeOpacity={0.7}
               onPress={() => getColor('#fde047')}
             />
             <TouchableOpacity 
               style={[ themeSelected === 'light' ? 
-              [styles.colorButton, {backgroundColor: theme.postItColors.color3, borderColor: 'black'}] 
+              [styles.colorButton, {backgroundColor: postItColors.color3, borderColor: 'black'}] 
               : 
-              [styles.colorButton, {backgroundColor: theme.baseColors.black, borderColor: theme.postItColors.color3, borderWidth: 3}]]}
+              [styles.colorButton, {backgroundColor: colors.black, borderColor: postItColors.color3, borderWidth: 3}]]}
               activeOpacity={0.7}
               onPress={() => getColor('#bef264')}
             />
             <TouchableOpacity 
               style={[ themeSelected === 'light' ? 
-              [styles.colorButton, {backgroundColor: theme.postItColors.color4, borderColor: 'black'}] 
+              [styles.colorButton, {backgroundColor: postItColors.color4, borderColor: 'black'}] 
               : 
-              [styles.colorButton, {backgroundColor: theme.baseColors.black, borderColor: theme.postItColors.color4, borderWidth: 3}]]}
+              [styles.colorButton, {backgroundColor: colors.black, borderColor: postItColors.color4, borderWidth: 3}]]}
               activeOpacity={0.7}
               onPress={() => getColor('#6ee7b7')}
             />
             <TouchableOpacity 
               style={[ themeSelected === 'light' ? 
-              [styles.colorButton, {backgroundColor: theme.postItColors.color5, borderColor: 'black'}] 
+              [styles.colorButton, {backgroundColor: postItColors.color5, borderColor: 'black'}] 
               : 
-              [styles.colorButton, {backgroundColor: theme.baseColors.black, borderColor: theme.postItColors.color5, borderWidth: 3}]]}
+              [styles.colorButton, {backgroundColor: colors.black, borderColor: postItColors.color5, borderWidth: 3}]]}
               activeOpacity={0.7}
               onPress={() => getColor('#67e8f9')}
             />                              
@@ -129,41 +129,41 @@ export function AddPostIt(){
           <View style={styles.colorRow}>
             <TouchableOpacity 
               style={[ themeSelected === 'light' ? 
-              [styles.colorButton, {backgroundColor: theme.postItColors.color6, borderColor: 'black'}] 
+              [styles.colorButton, {backgroundColor: postItColors.color6, borderColor: 'black'}] 
               : 
-              [styles.colorButton, {backgroundColor: theme.baseColors.black, borderColor: theme.postItColors.color6, borderWidth: 3}]]}
+              [styles.colorButton, {backgroundColor: colors.black, borderColor: postItColors.color6, borderWidth: 3}]]}
               activeOpacity={0.7}
               onPress={() => getColor('#4aa9ff')}
             />
             <TouchableOpacity 
               style={[ themeSelected === 'light' ? 
-              [styles.colorButton, {backgroundColor: theme.postItColors.color7, borderColor: 'black'}] 
+              [styles.colorButton, {backgroundColor: postItColors.color7, borderColor: 'black'}] 
               : 
-              [styles.colorButton, {backgroundColor: theme.baseColors.black, borderColor: theme.postItColors.color7, borderWidth: 3}]]}
+              [styles.colorButton, {backgroundColor: colors.black, borderColor: postItColors.color7, borderWidth: 3}]]}
               activeOpacity={0.7}
               onPress={() => getColor('#c4b5fd')}
             />
             <TouchableOpacity 
               style={[ themeSelected === 'light' ? 
-              [styles.colorButton, {backgroundColor: theme.postItColors.color8, borderColor: 'black'}] 
+              [styles.colorButton, {backgroundColor: postItColors.color8, borderColor: 'black'}] 
               : 
-              [styles.colorButton, {backgroundColor: theme.baseColors.black, borderColor: theme.postItColors.color8, borderWidth: 3}]]}
+              [styles.colorButton, {backgroundColor: colors.black, borderColor: postItColors.color8, borderWidth: 3}]]}
               activeOpacity={0.7}
               onPress={() => getColor('#f0abfc')}
             />
             <TouchableOpacity 
               style={[ themeSelected === 'light' ? 
-              [styles.colorButton, {backgroundColor: theme.postItColors.color9, borderColor: 'black'}] 
+              [styles.colorButton, {backgroundColor: postItColors.color9, borderColor: 'black'}] 
               : 
-              [styles.colorButton, {backgroundColor: theme.baseColors.black, borderColor: theme.postItColors.color9, borderWidth: 3}]]}
+              [styles.colorButton, {backgroundColor: colors.black, borderColor: postItColors.color9, borderWidth: 3}]]}
               activeOpacity={0.7}
               onPress={() => getColor('#fda4af')}
             />
             <TouchableOpacity 
               style={[ themeSelected === 'light' ? 
-              [styles.colorButton, {backgroundColor: theme.postItColors.color10, borderColor: 'black'}] 
+              [styles.colorButton, {backgroundColor: postItColors.color10, borderColor: 'black'}] 
               : 
-              [styles.colorButton, {backgroundColor: theme.baseColors.black, borderColor: theme.postItColors.color10, borderWidth: 3}]]}
+              [styles.colorButton, {backgroundColor: colors.black, borderColor: postItColors.color10, borderWidth: 3}]]}
               activeOpacity={0.7}
               onPress={() => getColor('#f87171')}
             />

@@ -1,18 +1,18 @@
 import { StyleSheet } from 'react-native';
-import { theme, light, dark } from '../../global/styles/theme';
+import { colors, postItColors, light, dark } from '../../global/styles/theme';
 
 export const styles = StyleSheet.create({
   containerLight: {
     width: 64,
     height: 64,
-    backgroundColor: theme.postItColors.color1,
+    backgroundColor: colors.orange,
     borderRadius: 32,
     alignItems: "center",
     justifyContent: "center",
     position: 'absolute',
     bottom: 16,
     alignSelf: 'center',
-    borderColor: theme.baseColors.black,
+    borderColor: colors.black,
     borderWidth: 1,
   },
   containerDark: {
@@ -25,7 +25,7 @@ export const styles = StyleSheet.create({
     position: 'absolute',
     bottom: 16,
     alignSelf: 'center',
-    borderColor: theme.postItColors.color1,
+    borderColor: colors.orange,
     borderWidth: 1,
   },
 });

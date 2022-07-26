@@ -1,7 +1,7 @@
 import React from 'react';
 import { styles } from './styles';
-import { View, Text, TouchableOpacity, TouchableOpacityProps } from "react-native";
-import { theme, light, dark } from '../../global/styles/theme';
+import { Text, TouchableOpacity, TouchableOpacityProps } from "react-native";
+import { colors, light, dark } from '../../global/styles/theme';
 
 export type PostItProps = {
   id: string;
@@ -20,7 +20,7 @@ export function PostIt({data, themeSelected, ...rest}: Props){
       style={[ themeSelected === 'light' ? 
       [styles.container, {backgroundColor: data.color, borderColor: dark.bg}] 
       : 
-      [styles.container, {backgroundColor: theme.baseColors.black, borderColor: data.color}]]}
+      [styles.container, {backgroundColor: colors.black, borderColor: data.color}]]}
       activeOpacity={0.7}
       {...rest}
     >

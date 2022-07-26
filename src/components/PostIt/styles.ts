@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { theme } from '../../global/styles/theme';
+import { fonts } from '../../global/styles/theme';
 
 export const styles = StyleSheet.create({
   container: {
@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
     borderTopRightRadius: 16,
   },
   text: {
-    fontFamily: theme.fonts.regular400,
+    fontFamily: fonts.roboto.regular400,
     fontSize: 18,
     lineHeight: 22,
   },
