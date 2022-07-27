@@ -23,13 +23,3 @@ export const postItColors = {
   color9: '#fda4af',
   color10: '#f87171',
 };
-
-export const light = {
-  bg: '#f6f4fA',
-  tx: '#000000'
-};
-
-export const dark = {
-  bg: '#000000',
-  tx: '#ffffff'
-};
